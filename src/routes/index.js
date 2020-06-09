@@ -5,6 +5,7 @@ import ItemView from '../views/ItemView.vue';
 import NewsView from '../views/NewsView.vue';
 import AskView from '../views/AskView.vue';
 import JobsView from '../views/JobsView.vue';
+import AsyncAwaitView from '../views/AsyncAwaitView.vue'
 import bus from '../utils/bus.js';
 import { store } from '../store/index.js';
 // import createListView from '../views/CreateListView.js';
@@ -75,6 +76,10 @@ export const router = new VueRouter({
         {
             path: '/item/:id',
             component: ItemView,
+        },
+        {
+            path: '/async-await',
+            component: AsyncAwaitView,
         }
     ]
 });

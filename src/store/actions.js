@@ -5,24 +5,20 @@ import {
 } from "../api/index.js";
 
 export default {
-    // #2
+    // api단에서 이미 try-catch 처리 됨
     async FETCH_LIST({ commit }, pageName) {
-        // #3
-        return fetchList(pageName)
-            .then(({ data }) => {
-                // #4
-                commit('SET_LIST', data)
-            })
-            .catch(error => console.log(error));
+        const response = await fetchList(pageName);
+        commit('SET_LIST', response.data);
+        return response;
     },
     async FETCH_USER({ commit }, name) {
-        return fetchUserInfo(name)
-            .then(({ data }) => commit('SET_USER', data))
-            .catch(error => console.log(error));
+        const response = await fetchUserInfo(name);
+        commit('SET_USER', response.data)
+        return response;
     },
     async FETCH_ITEM({ commit }, id) {
-        return fetchCommentItem(id)
-            .then(({ data }) => commit('SET_ITEM', data))
-            .catch(error => console.log(error));
+        const response = await fetchCommentItem(id);
+        commit('SET_ITEM', response.data);
+        return response;
     },
 }
