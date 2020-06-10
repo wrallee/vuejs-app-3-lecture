@@ -5,10 +5,12 @@ import ItemView from '../views/ItemView.vue';
 import NewsView from '../views/NewsView.vue';
 import AskView from '../views/AskView.vue';
 import JobsView from '../views/JobsView.vue';
-import AsyncAwaitView from '../views/AsyncAwaitView.vue'
 import bus from '../utils/bus.js';
 import { store } from '../store/index.js';
 // import createListView from '../views/CreateListView.js';
+
+import AsyncAwaitView from '../views/others/AsyncAwaitView.vue'
+import ChartView from '../views/others/ChartView.vue'
 
 Vue.use(VueRouter)
 
@@ -80,6 +82,10 @@ export const router = new VueRouter({
         {
             path: '/async-await',
             component: AsyncAwaitView,
-        }
+        },
+        {
+            path: '/chart',
+            component: ChartView,
+        },
     ]
 });

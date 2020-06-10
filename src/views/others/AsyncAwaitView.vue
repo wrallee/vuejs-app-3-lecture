@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="loginUser1">login</button>
+    <button @click="loginUserAsAw">login</button>
     <h1>List</h1>
     <ul>
       <li :key="item" v-for="item in items">
@@ -26,7 +26,7 @@ export default {
         .then(response => console.log(response.data))
         .catch(error => console.log(error));
     },
-    async loginUser1() {
+    async loginUserAsAw() {
       try {
         var response = await axios.get('https://jsonplaceholder.typicode.com/users/1');
         if (response.data.id === 1) {
