@@ -32,6 +32,10 @@ export default {
     }
   },
   created() {
+    console.log(process.env.APP_ENV_TEST_1);
+    console.log(process.env.VUE_APP_ENV_TEST_2);
+    console.log(process.env.VUE_APP_ENV_TEST_3);
+    
     bus.$on('start:spinner', this.startSpinner);
     bus.$on('end:spinner', this.endSpinner);
   },
