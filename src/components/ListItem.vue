@@ -59,7 +59,7 @@ export default {
   border-bottom: 1px solid #eee;
 }
 .points {
-  width: 80px;
+  min-width: 60px;
   height: 60px;
   display: flex;
   align-items: center;
