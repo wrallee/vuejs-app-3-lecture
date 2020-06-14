@@ -6,6 +6,9 @@ export default {
     mounted() {
         bus.$emit('end:spinner');
     },
+    updated() {
+        bus.$emit('end:spinner');
+    }
     // created() {
     //     bus.$emit('start:spinner');
     //     // #1

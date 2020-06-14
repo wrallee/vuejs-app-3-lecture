@@ -35,12 +35,15 @@
 </template>
 
 <script>
+import SpinnerMixin from "../mixins/SpinnerMixin.js";
+
 export default {
   computed: {
     listItem() {
       return this.$store.state.list;
     }
   },
+  mixins: [SpinnerMixin],
 }
 </script>
 

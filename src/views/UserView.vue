@@ -10,6 +10,7 @@
 
 <script>
 import UserProfile from '../components/UserProfile.vue';
+import SpinnerMixin from "../mixins/SpinnerMixin.js";
 import { mapState } from 'vuex';
 
 export default {
@@ -19,10 +20,11 @@ export default {
   computed: {
     ...mapState(['user']),
   },
-  created() {
-    const userName = this.$route.params.id;
-    this.$store.dispatch('FETCH_USER', userName);
-  },
+  // created() {
+  //   const userName = this.$route.params.id;
+  //   this.$store.dispatch('FETCH_USER', userName);
+  // },
+  mixins: [SpinnerMixin],
 }
 </script>
 
